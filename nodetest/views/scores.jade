@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	h1.
+		PopTiles 排行榜
+	div
+		table.table.table-striped
+			thead
+				tr
+					th Name
+					th Score
+					th Time
+			tbody
+				each score, i in scores
+					tr
+						td !{score.username}
+						td #{score.score}
+						td #{score.timestamp}
